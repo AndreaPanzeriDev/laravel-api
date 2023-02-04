@@ -1912,6 +1912,25 @@ __webpack_require__.r(__webpack_exports__);
   name: "App",
   components: {
     //Qui inseriamo i futuri componenti per questa views
+  },
+  data: function data() {
+    return {
+      posts: []
+    };
+  },
+  mounted: function mounted() {
+    this.getPost();
+  },
+  methods: {
+    getPost: function getPost() {
+      var _this = this;
+      axios.get('http://localhost:8000/api/posts').then(function (response) {
+        console.log(response.data);
+        _this.posts = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
   }
 });
 
@@ -1931,13 +1950,13 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _vm._m(0);
+  return _c("div", [_c("h1", [_vm._v("Work in progress")]), _vm._v(" "), _c("ul", _vm._l(_vm.posts, function (elem) {
+    return _c("li", {
+      key: elem.id
+    }, [_vm._v(_vm._s(elem.title))]);
+  }), 0)]);
 };
-var staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", [_c("h1", [_vm._v("Work in progress")])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
