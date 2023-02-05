@@ -1947,18 +1947,18 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      isLoading: false,
-      posts: []
+      posts: [],
+      isLoading: false
     };
   },
   mounted: function mounted() {
-    this.getPosts();
+    this.getPost();
   },
   methods: {
     getPost: function getPost() {
       var _this = this;
       this.isLoading = true;
-      axios.get("http://localhost:8000/api/posts").then(function (response) {
+      axios.get('http://localhost:8000/api/posts').then(function (response) {
         console.log(response.data);
         _this.posts = response.data;
       })["catch"](function (error) {
