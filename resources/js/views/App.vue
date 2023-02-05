@@ -1,21 +1,23 @@
 <template>
     <div>
         <h1>Work in progress</h1>
-        <ul>
-            <li v-for="elem in posts" :key="elem.id">{{ elem.title }}</li>
-        </ul>
+        <PostList :posts="posts" :isLoading="isLoading"/>
     </div>
 </template>
 
 <script>
+import PostList from '../components/posts/PostList.vue'
+
 export default {
     name: "App",
     components: {
         //Qui inseriamo i futuri componenti per questa views
+        PostList
     },
     data(){
         return {
-            posts:[]
+            posts:[],
+            isLoading: false,
         }
     },
     mounted(){
@@ -23,6 +25,7 @@ export default {
     },
     methods: {
         getPost(){
+            this.isLoading = true;
             axios.get('http://localhost:8000/api/posts')
               .then(response => {
                     console.log(response.data);
@@ -30,6 +33,8 @@ export default {
                 })
               .catch(error => {
                     console.log(error);
+              }).then(() =>{
+                this.isLoading = false;
               })
         }
     }
