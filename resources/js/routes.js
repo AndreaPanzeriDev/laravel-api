@@ -6,6 +6,8 @@ Vue.use(VueRouter)
 //import  dei componenti che fungono da pagina
 import AboutUS from './components/AboutUs.vue'
 
+import PostIndex from './views/Pages/posts/PostIndex.vue'
+
 
 const router = new VueRouter({
     mode: 'history',
@@ -14,6 +16,11 @@ const router = new VueRouter({
             path: '/about-us',
             name: 'about-us',
             component: AboutUS
+        },
+        {
+            path: '/posts',
+            name: 'posts',
+            component: PostIndex
         },
 
     ]
