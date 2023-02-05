@@ -1,7 +1,8 @@
 <template>
     <div>
-        <h1>Work in progress</h1>
-        <PostList :posts="posts" :isLoading="isLoading"/>
+        <!--<h1>Work in progress</h1>-->
+        <!--<PostList :posts="posts" :isLoading="isLoading"/>-->
+        <router-view></router-view>>
     </div>
 </template>
 
