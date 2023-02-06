@@ -2095,11 +2095,6 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _vm._m(0);
-};
-var staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
   return _c("div", [_c("nav", {
     staticClass: "navbar navbar-expand-lg bg-body-tertiary"
   }, [_c("div", {
@@ -2109,7 +2104,40 @@ var staticRenderFns = [function () {
     attrs: {
       href: "#"
     }
-  }, [_vm._v("Navbar")]), _vm._v(" "), _c("button", {
+  }, [_vm._v("Navbar")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "collapse navbar-collapse",
+    attrs: {
+      id: "navbarNavAltMarkup"
+    }
+  }, [_c("div", {
+    staticClass: "navbar-nav"
+  }, [_c("router-link", {
+    staticClass: "nav-link active",
+    attrs: {
+      "aria-current": "page",
+      to: "/"
+    }
+  }, [_vm._v("Home")]), _vm._v(" "), _c("router-link", {
+    staticClass: "nav-link",
+    attrs: {
+      to: "/posts"
+    }
+  }, [_vm._v("Posts")]), _vm._v(" "), _c("router-link", {
+    staticClass: "nav-link",
+    attrs: {
+      to: "/about-us"
+    }
+  }, [_vm._v("About Us")]), _vm._v(" "), _c("router-link", {
+    staticClass: "nav-link",
+    attrs: {
+      to: "/admin"
+    }
+  }, [_vm._v("Admin")])], 1)])])])]);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("button", {
     staticClass: "navbar-toggler",
     attrs: {
       type: "button",
@@ -2121,30 +2149,7 @@ var staticRenderFns = [function () {
     }
   }, [_c("span", {
     staticClass: "navbar-toggler-icon"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "collapse navbar-collapse",
-    attrs: {
-      id: "navbarNavAltMarkup"
-    }
-  }, [_c("div", {
-    staticClass: "navbar-nav"
-  }, [_c("a", {
-    staticClass: "nav-link active",
-    attrs: {
-      "aria-current": "page",
-      href: "http://127.0.0.1:8000/"
-    }
-  }, [_vm._v("Home")]), _vm._v(" "), _c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "http://127.0.0.1:8000/posts"
-    }
-  }, [_vm._v("Posts")]), _vm._v(" "), _c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "http://127.0.0.1:8000/admin"
-    }
-  }, [_vm._v("Admin")])])])])])]);
+  })]);
 }];
 render._withStripped = true;
 

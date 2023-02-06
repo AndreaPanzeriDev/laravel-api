@@ -16,9 +16,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Home</a>
-            <a class="nav-link" href="http://127.0.0.1:8000/posts">Posts</a>
-            <a class="nav-link" href="http://127.0.0.1:8000/admin">Admin</a>
+            <router-link class="nav-link active" aria-current="page" :to="'/'">Home</router-link>
+            <router-link class="nav-link" :to="'/posts'">Posts</router-link>
+            <router-link class="nav-link" :to="'/about-us'">About Us</router-link>
+            <router-link class="nav-link" :to="'/admin'">Admin</router-link>
           </div>
         </div>
       </div>
