@@ -8,6 +8,7 @@ import AboutUS from './components/AboutUs.vue'
 import HomePage from './components/HomePage.vue'
 
 import PostIndex from './views/Pages/posts/PostIndex.vue'
+import PostShow from './views/Pages/posts/PostShow.vue'
 
 
 const router = new VueRouter({
@@ -27,6 +28,11 @@ const router = new VueRouter({
             path: '/posts',
             name: 'posts',
             component: PostIndex
+        },
+        {
+            path: '/posts/:id',
+            name: 'single-post',
+            component: PostShow
         },
 
     ]

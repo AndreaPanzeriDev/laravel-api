@@ -2,7 +2,12 @@
   <div>
     <Loader v-if="isLoading" />
     <ul>
-      <li v-for="elem in posts" :key="elem.id">{{ elem.title }}</li>
+      <li v-for="elem in posts" :key="elem.id">
+        <router-link :to="`/posts/${elem.id}`"> <!--Andrebbe bene anche solo :to="`/posts/${elem.id}`"--> <!--:to="{ name: 'single-post', params: $elem.id}"-->
+            {{ elem.title }}
+        </router-link>
+
+    </li>
     </ul>
   </div>
 </template>

@@ -19,7 +19,7 @@
             <router-link class="nav-link active" aria-current="page" :to="'/'">Home</router-link>
             <router-link class="nav-link" :to="'/posts'">Posts</router-link>
             <router-link class="nav-link" :to="'/about-us'">About Us</router-link>
-            <router-link class="nav-link" :to="'/admin'">Admin</router-link>
+            <router-link class="nav-link" :to="'/login'">Admin</router-link>
           </div>
         </div>
       </div>
